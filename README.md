@@ -17,4 +17,4 @@ Ila knti kadi9elleb 3la code n9i.
 Yazid TAHIRI ALAOUI - Etudiant ID1 (Ingenierie Donnees).
 
 ## hadchi mouhim 
-Ila drti copier-coller l had l-code w chedo l-ostad f TP dyalek, ana machi mass2oul 3la nwatek. T7eml l-mas2oulia dyal les bugs dyalek b rjola!
+Ila drti copier coller l had l code  f TP dyalek, ana machi mass2oul 3la nno9ta dyalk. T7eml lmas2oulia dyal les bugs dyalek b kol rjola!
