@@ -3,8 +3,7 @@
 Marhba bikom f repo GitHub dyali.
 
 ## Hadchi dyalash?
-Had l-repo fih l-khedma dyal TP ra9m 3 f l-module dyal Programmation Orientee Objet (POO) li m2ettro l-ostad dyalna Pr. Mohamed CHERRADI.
-Ila knti kadi9elleb 3la code n9i.
+Had l-repo fih l-khedma dyal TP ra9m 3 f lmodule dyal Programmation Orientee Objet (POO) li m2ettro l ostad dyalna Pr. Mohamed CHERRADI.
 
 ## Chno kayn f had doussi?
 
