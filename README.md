@@ -15,5 +15,3 @@ Had l-repo fih l-khedma dyal TP ra9m 3 f lmodule dyal Programmation Orientee Obj
 ## Moul chi
 Yazid TAHIRI ALAOUI - Etudiant ID1 (Ingenierie Donnees).
 
-## hadchi mouhim 
-Ila drti copier coller l had l code  f TP dyalek, ana machi mass2oul 3la nno9ta dyalk. T7eml lmas2oulia dyal les bugs dyalek b kol rjola!
