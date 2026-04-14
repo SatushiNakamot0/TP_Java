@@ -1,0 +1,105 @@
+% ============================================================================
+%  chapter-template.tex — Tamplate dyal chapitre
+%  Bghiti chapitre jdid, dirlih copier coller w semmih
+%  bhal: chapters/chapter-01-introduction.tex
+% ============================================================================
+
+\chapter{Titre du Chapitre}
+\sloppy  % bach mayb9ach derives w ysde3na b hbox
+
+% ── Fo9ra/Section ─────────────────────────────────────────────────────────────────
+\section{Première Section}
+
+Rédigez le contenu de votre première section ici. Le template applique
+automatiquement la mise en forme définie dans le fichier de style
+(\texttt{yazid-template.sty}).
+
+% ── Sous Section ──────────────────────────────────────────────────────────────
+\subsection{Sous-section}
+
+Exemple de liste à puces~:
+
+\begin{itemize}
+
+    \item Premier élément de la liste~;
+
+    \item Deuxième élément avec du texte en \textbf{gras} et en
+          \textit{italique}~;
+
+    \item Troisième élément.
+
+\end{itemize}
+
+% ── fo9ra khra ─────────────────────────────────────────────────────────
+\section{Deuxième Section}
+
+Exemple de liste numérotée~:
+
+\begin{enumerate}
+
+    \item Étape numéro un~;
+
+    \item Étape numéro deux~;
+
+    \item Étape numéro trois.
+
+\end{enumerate}
+
+% ── Mital dyal jdwel ───────────────────────────────────────────────────────────
+\section{Exemple de Tableau}
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{0.9\textwidth}{L{3cm} X C{2.5cm}}
+\toprule
+\textbf{\color{primarycolor}Colonne A} &
+\textbf{\color{primarycolor}Colonne B} &
+\textbf{\color{primarycolor}Colonne C} \\
+\midrule
+Ligne 1 & Description de la ligne 1 & Valeur \\
+\addlinespace[0.15cm]
+Ligne 2 & Description de la ligne 2 & Valeur \\
+\addlinespace[0.15cm]
+Ligne 3 & Description de la ligne 3 & Valeur \\
+\bottomrule
+\end{tabularx}
+\caption{Exemple de tableau avec le template}
+\end{table}
+
+% ── Mital dyal teswira m9adda ─────────────────────────────────────────────────
+\section{Exemple de Figure Encadrée}
+
+\begin{borderedfigure}
+    \centering
+    % Bdlel had path b lien dyal teswira (f doussi figures/...)
+    % \includegraphics[width=0.8\textwidth]{figures/dyalti.png}
+    \textcolor{primarycolor}{\rule{0.6\textwidth}{4cm}}  % wa7d lbassa khalouha hna bach tiban test
+    \captionof{figure}{Description de la figure encadrée}
+\end{borderedfigure}
+
+% ── Mital dyal infobox mzaw9a ────────────────────────────────────────────────────────
+\section{Exemple de Boîtes Stylisées}
+
+\begin{infobox}
+    \centering
+    \vspace{0.3cm}
+    {\large Ceci est une \textbf{boîte d'information}. Utilisez-la pour
+    mettre en valeur des éléments importants.}
+    \vspace{0.3cm}
+\end{infobox}
+
+\vspace{0.5cm}
+
+\begin{warningbox}
+    \textbf{\textcolor{red!70!black}{\large Attention}}\\[0.3cm]
+    Ceci est une boîte d'avertissement pour les informations critiques.
+\end{warningbox}
+
+\vspace{0.5cm}
+
+\begin{accentbox}
+    \centering
+    \vspace{0.3cm}
+    {\large Boîte avec bordure dorée pour les formules ou citations.}
+    \vspace{0.3cm}
+\end{accentbox}

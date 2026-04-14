@@ -1,0 +1,89 @@
+\chapter{Travaux Pratiques N\textsuperscript{o} 3}
+
+Ce chapitre regroupe l'ensemble des exercices r\'{e}alis\'{e}s lors du TP3. Pour chaque exercice, l'\'{e}nonc\'{e} et l'objectif de la classe sont d\'{e}crits, suivis de l'impl\'{e}mentation en Java.
+
+% --- Tmerin 1 ---
+\section{Exercice 1 : Classe \texttt{Point}}
+Le premier exercice consiste \`{a} cr\'{e}er une classe \texttt{Point} mod\'{e}lisant un point dans un plan bool\'{e}en 2D avec les coordonn\'{e}es \texttt{x} et \texttt{y}. La classe doit inclure des m\'{e}thodes pour :
+\begin{itemize}
+    \item Afficher les coordonn\'{e}es du point.
+    \item D\'{e}placer le point selon des valeurs de d\'{e}calage donn\'{e}es.
+    \item Calculer la distance entre deux points donn\'{e}s.
+\end{itemize}
+
+\lstinputlisting[language=Java, caption={Impl\'{e}mentation de la classe Point}]{src/Point.java}
+
+% --- Tmerin 2 ---
+\section{Exercice 2 : Classe \texttt{Voiture}}
+Il s'agit de d\'{e}finir une classe \texttt{Voiture} caract\'{e}ris\'{e}e par sa marque et sa vitesse. Les m\'{e}thodes \`{a} impl\'{e}menter sont :
+\begin{itemize}
+    \item \texttt{accelerer()} pour augmenter la vitesse selon un incr\'{e}ment.
+    \item \texttt{freiner()} pour d\'{e}cr\'{e}menter la vitesse, tout en s'assurant qu'elle ne devient pas n\'{e}gative.
+\end{itemize}
+
+\lstinputlisting[language=Java, caption={Impl\'{e}mentation de la classe Voiture}]{src/Voiture.java}
+
+% --- Tmerin 3 ---
+\section{Exercice 3 : Classe \texttt{CompteBancaire}}
+Cet exercice a pour but de mod\'{e}liser un compte bancaire avec un \texttt{numero} et un \texttt{solde}. Il faut coder les op\'{e}rations suivantes :
+\begin{itemize}
+    \item D\'{e}poser de l'argent.
+    \item Retirer de l'argent (en v\'{e}rifiant au pr\'{e}alable que le solde est suffisant).
+    \item Transf\'{e}rer un montant vers un autre compte destinataire.
+    \item Afficher le solde du compte courant.
+\end{itemize}
+
+\lstinputlisting[language=Java, caption={Impl\'{e}mentation de la classe CompteBancaire}]{src/CompteBancaire.java}
+
+% --- Tmerin 4 ---
+\section{Exercice 4 : Classe \texttt{Rectangle}}
+Dans cet exercice, il faut cr\'{e}er une classe \texttt{Rectangle} poss\'{e}dant une \texttt{largeur} et une \texttt{hauteur}. Des m\'{e}thodes doivent permettre de :
+\begin{itemize}
+    \item Calculer et retourner la surface.
+    \item Calculer et retourner le p\'{e}rim\`{e}tre.
+\end{itemize}
+
+\lstinputlisting[language=Java, caption={Impl\'{e}mentation de la classe Rectangle}]{src/Rectangle.java}
+
+% --- Tmerin 5 ---
+\section{Exercice 5 : Classe \texttt{Etudiant}}
+L'objectif est de structurer les informations d'un \texttt{Etudiant} (CNE et note) et d'y ajouter le comportement suivant :
+\begin{itemize}
+    \item Renvoyer une cha\^{i}ne sous la forme \texttt{"CNE : ... | Note : ..."} \`{a} travers une m\'{e}thode personnalis\'{e}e \texttt{toString()}.
+    \item V\'{e}rifier si l'\'{e}tudiant est admis (\texttt{note $\geq$ 10}) gr\^{a}ce \`{a} la m\'{e}thode \texttt{estAdmis()}.
+\end{itemize}
+
+\lstinputlisting[language=Java, caption={Impl\'{e}mentation de la classe Etudiant}]{src/Etudiant.java}
+
+% --- Tmerin 6 ---
+\section{Exercice 6 : Classe \texttt{JeuDevinette}}
+Ce programme simule un jeu o\`{u} l'utilisateur doit deviner un \texttt{nombreSecret}. La classe permet de :
+\begin{itemize}
+    \item V\'{e}rifier la proposition de l'utilisateur par rapport au nombre g\'{e}n\'{e}r\'{e} al\'{e}atoirement en donnant des indices ("plus grand", "plus petit", "trouv\'{e}").
+    \item Afficher un score final d\'{e}pendant du nombre de \texttt{tentatives}.
+\end{itemize}
+
+\lstinputlisting[language=Java, caption={Impl\'{e}mentation de la classe JeuDevinette}]{src/JeuDevinette.java}
+
+% --- Tmerin 7 ---
+\section{Exercice 7 : Classe \texttt{NombreComplexe}}
+Il s'agit de d\'{e}finir une classe \texttt{NombreComplexe} poss\'{e}dant une composante \texttt{reel} et une composante \texttt{imaginaire}. L'objectif est d'impl\'{e}menter les op\'{e}rations math\'{e}matiques suivantes :
+\begin{itemize}
+    \item L'addition de deux nombres complexes (s\'{e}par\'{e}ment sur la partie r\'{e}elle et imaginaire).
+    \item La multiplication complexe.
+    \item L'affichage du nombre au format usuel $a + ib$ ou $a - ib$.
+\end{itemize}
+
+\lstinputlisting[language=Java, caption={Impl\'{e}mentation de la classe NombreComplexe}]{src/NombreComplexe.java}
+
+% --- Tmerin 8 ---
+\section{Exercice 8 : Classe \texttt{Produit}}
+Le dernier exercice impl\'{e}mente un syst\`{e}me de gestion d'un stock de produits. Chaque \texttt{Produit} comprend~: un identifiant, nom, description, prix et quantit\'{e}. Les fonctionnalit\'{e}s principales sont :
+\begin{itemize}
+    \item Ajouter une quantit\'{e} suite \`{a} un arrivage si les identifiants correspondent.
+    \item Modifier les d\'{e}tails d'un produit.
+    \item R\'{e}initialiser ou supprimer un produit de mani\`{e}re d\'{e}finitive.
+    \item R\'{e}cup\'{e}rer ou afficher les attributs du produit en question.
+\end{itemize}
+
+\lstinputlisting[language=Java, caption={Impl\'{e}mentation de la classe Produit}]{src/Produit.java}

@@ -1,0 +1,244 @@
+% ============================================================================
+%  yazid-template.sty — Package dyal style LaTeX
+%  Moulchi:  Yazid TAHIRI ALAOUI
+%  Lgharad: style n3awdo nkhdmo bih f les rapports w doc
+%  Tari9a:   \usepackage{styles/yazid-template}
+% ============================================================================
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{styles/yazid-template}[2025/03/23 Yazid Universal Template]
+
+% ────────────────────────────────────────────────────────────────────────────
+%  1. LES PACKAGES ASASIIN (CORE)
+% ────────────────────────────────────────────────────────────────────────────
+\RequirePackage[utf8]{inputenc}          % UTF-8 input encoding
+\RequirePackage[T1]{fontenc}             % T1 font encoding
+\RequirePackage[french]{babel}           % French language support (change as needed)
+\RequirePackage{lmodern}                 % Latin Modern fonts
+\RequirePackage{microtype}               % Microtypographic enhancements
+
+% ────────────────────────────────────────────────────────────────────────────
+%  2. TSAWER W CHKALAT (GRAPHICS & FIGURES)
+% ────────────────────────────────────────────────────────────────────────────
+\RequirePackage{graphicx}                % Include images
+\RequirePackage{subcaption}              % Sub-figures
+\RequirePackage{caption}                 % Caption customisation
+\RequirePackage{float}                   % Precise float placement [H]
+\RequirePackage{tikz}                    % TikZ drawings
+\usetikzlibrary{shapes.geometric, arrows.meta, shadows, positioning, calc}
+
+% ────────────────────────────────────────────────────────────────────────────
+%  3. DECOR W ZWA9 (LAYOUT & FORMATTING)
+% ────────────────────────────────────────────────────────────────────────────
+\RequirePackage{geometry}                % Page geometry
+\RequirePackage{titlesec}                % Section title styling
+\RequirePackage{fancyhdr}                % Headers & footers
+\RequirePackage{tocloft}                 % Table of contents styling
+\RequirePackage{ragged2e}                % Improved ragged text
+\RequirePackage{enumitem}                % List customisation
+
+% ────────────────────────────────────────────────────────────────────────────
+%  4. JDAWIL (TABLEAUX)
+% ────────────────────────────────────────────────────────────────────────────
+\RequirePackage{array}                   % Extended column types
+\RequirePackage{booktabs}                % Professional table rules
+\RequirePackage{tabularx}                % Auto-width tables
+
+% ────────────────────────────────────────────────────────────────────────────
+%  5. LMAT W L7SAB (MATH)
+% ────────────────────────────────────────────────────────────────────────────
+\RequirePackage{amssymb}                 % AMS symbols
+\RequirePackage{amsmath}                 % AMS math environments
+
+% ────────────────────────────────────────────────────────────────────────────
+%  6. MROB3AT W LKADRAT (BOXES & FRAMES)
+% ────────────────────────────────────────────────────────────────────────────
+\RequirePackage{framed}                  % Simple frames
+\RequirePackage{mdframed}                % Advanced framed boxes
+
+% ────────────────────────────────────────────────────────────────────────────
+%  7. LKOUD LMAKTUB (CODE LISTINGS)
+% ────────────────────────────────────────────────────────────────────────────
+\RequirePackage{listings}                % Source code listings
+\RequirePackage{xcolor}                  % Colour support
+
+% ────────────────────────────────────────────────────────────────────────────
+%  8. LIYENNAT W RAWABIT (khallihom lakhrin bach maytkhassmouch)
+% ────────────────────────────────────────────────────────────────────────────
+\RequirePackage{hyperref}                % Clickable links & PDF metadata
+
+% ============================================================================
+%  LALWAN DYALNA — Bdlelhom hna bghiti tbeddel lblan
+% ============================================================================
+\definecolor{primarycolor}{RGB}{0, 51, 102}       % Deep blue
+\definecolor{accentcolor}{RGB}{204, 153, 0}       % Gold
+\definecolor{codebackground}{RGB}{248, 248, 248}  % Light grey for code
+\definecolor{commentgreen}{RGB}{34, 139, 34}      % Green for code comments
+
+% ============================================================================
+%  L3BARAT DYAL LWAR9A (GEOMETRY)
+% ============================================================================
+\geometry{
+    left=2.5cm,
+    right=2.5cm,
+    top=2.5cm,
+    bottom=2.5cm,
+    headheight=15pt
+}
+
+% ============================================================================
+%  LES ENTETES W LFOOTER M9ADDIN
+%  Bdlelhom f main.tex b \renewcommand 9bl matsawb \begin{document}
+% ============================================================================
+\newcommand{\headerLeft}{Document Title}
+\newcommand{\headerRight}{Institution -- Year}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textcolor{primarycolor}{\textit{\headerLeft}}}
+\fancyhead[R]{\small\textcolor{primarycolor}{\textit{\headerRight}}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.8pt}
+\renewcommand{\footrulewidth}{0.8pt}
+\renewcommand{\headrule}{%
+    \color{primarycolor}\hrule width\headwidth height\headrulewidth \vskip-\headrulewidth}
+\renewcommand{\footrule}{%
+    \color{primarycolor}\vskip-\footruleskip\vskip-\footrulewidth
+    \hrule width\headwidth height\footrulewidth\vskip\footruleskip}
+
+% Plain style (chapter opening pages)
+\fancypagestyle{plain}{
+    \fancyhf{}
+    \fancyfoot[C]{\thepage}
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrule}{%
+        \color{primarycolor}\vskip-\footruleskip\vskip-\footrulewidth
+        \hrule width\headwidth height\footrulewidth\vskip\footruleskip}
+}
+
+% ============================================================================
+%  RRGLAJ DYAL HYPERREF — Bdlel f main.tex ila khessek
+% ============================================================================
+\hypersetup{
+    colorlinks=true,
+    linkcolor=primarycolor,
+    filecolor=magenta,
+    urlcolor=primarycolor,
+    citecolor=accentcolor
+}
+
+% ============================================================================
+%  LKBTIBA THT TSAWER W TBL (CAPTIONS)
+% ============================================================================
+\captionsetup[figure]{
+    format=hang,
+    font=small,
+    labelfont={bf,color=primarycolor},
+    justification=centering,
+    skip=10pt
+}
+\captionsetup[table]{
+    format=hang,
+    font=small,
+    labelfont={bf,color=primarycolor},
+    justification=centering,
+    skip=10pt,
+    position=top
+}
+
+% ============================================================================
+%  STYLES DYAL L3ANAWIN
+% ============================================================================
+
+% --- Chapter ---
+\titleformat{\chapter}[display]
+  {\normalfont\bfseries\color{primarycolor}}
+  {\filleft\Huge\chaptertitlename\ \thechapter}
+  {2ex}
+  {\titlerule\vspace{1ex}\huge}
+  [\vspace{1ex}\titlerule]
+
+% --- Section ---
+\titleformat{\section}
+  {\normalfont\Large\bfseries\color{primarycolor}}
+  {\thesection\hspace{0.5em}\textcolor{accentcolor}{|}}{0.5em}{}
+
+% --- Subsection ---
+\titleformat{\subsection}
+  {\normalfont\large\bfseries\color{primarycolor!80!black}}
+  {\thesubsection}{1em}{}
+
+% ============================================================================
+%  STYLES DYAL L9AWA2IM (LIST)
+% ============================================================================
+\setlist[itemize]{leftmargin=*, label=\textcolor{accentcolor}{$\blacktriangleright$}}
+\setlist[enumerate]{leftmargin=*, label=\textcolor{primarycolor}{\textbf{\arabic*.}}}
+
+% ============================================================================
+%  STYLE DYAL FIHRAS (TOC)
+% ============================================================================
+\renewcommand{\cftchapfont}{\bfseries\color{primarycolor}}
+\renewcommand{\cftsecfont}{\color{black}}
+\renewcommand{\cftsubsecfont}{\color{black!70}}
+\renewcommand{\cftchapleader}{\color{accentcolor}\cftdotfill{\cftdotsep}}
+
+% ============================================================================
+%  CHKAL KHASS DYAL TABLEAUX
+% ============================================================================
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+
+% ============================================================================
+%  BY2AT KHASSA BYA (ENVIRONMENTS)
+% ============================================================================
+
+% Bordered figure box — use: \begin{borderedfigure} ... \end{borderedfigure}
+\newenvironment{borderedfigure}
+    {\begin{mdframed}[linecolor=primarycolor, linewidth=1.5pt, roundcorner=5pt,
+        innertopmargin=10pt, innerbottommargin=10pt,
+        innerleftmargin=10pt, innerrightmargin=10pt,
+        backgroundcolor=white, shadow=true, shadowcolor=gray!30, shadowsize=4pt]}
+    {\end{mdframed}}
+
+% Highlighted info box — use: \begin{infobox} ... \end{infobox}
+\newenvironment{infobox}
+    {\begin{mdframed}[linecolor=primarycolor, linewidth=1pt, roundcorner=5pt,
+        backgroundcolor=blue!3,
+        userdefinedwidth=0.85\textwidth, align=center]}
+    {\end{mdframed}}
+
+% Warning / alert box — use: \begin{warningbox} ... \end{warningbox}
+\newenvironment{warningbox}
+    {\begin{mdframed}[linecolor=red!70!black, linewidth=1.5pt, roundcorner=5pt,
+        backgroundcolor=red!3,
+        innertopmargin=12pt, innerbottommargin=12pt,
+        innerleftmargin=12pt, innerrightmargin=12pt]}
+    {\end{mdframed}}
+
+% Accent box (gold border) — use: \begin{accentbox} ... \end{accentbox}
+\newenvironment{accentbox}
+    {\begin{mdframed}[linecolor=accentcolor, linewidth=1pt, roundcorner=10pt,
+        backgroundcolor=white,
+        userdefinedwidth=0.8\textwidth, align=center]}
+    {\end{mdframed}}
+
+% ============================================================================
+%  FORMAT PAR DEFAUT DYAL LKOUD
+% ============================================================================
+\lstset{
+    backgroundcolor=\color{codebackground},
+    basicstyle=\ttfamily\small,
+    breaklines=true,
+    captionpos=b,
+    commentstyle=\color{commentgreen}\itshape,
+    keywordstyle=\color{primarycolor}\bfseries,
+    stringstyle=\color{accentcolor},
+    frame=single,
+    rulecolor=\color{primarycolor!40},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    tabsize=4,
+    showstringspaces=false
+}
+
+\endinput

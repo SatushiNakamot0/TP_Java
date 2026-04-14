@@ -1,0 +1,80 @@
+% ============================================================================
+%  main.tex — fichier principal dyal rapport
+%  Moulchi:  Yazid TAHIRI ALAOUI
+%  khesni nbdder les variables w n-compili b pdflatex.
+% ============================================================================
+\documentclass[a4paper,12pt]{report}
+
+% ── njibou les styles li khessou ──────────────────────────────────────────────────
+\usepackage{styles/yazid-template}
+
+% ============================================================================
+%  Les infos dyal projet (nktbhom hna bla manhrress rasi)
+% ============================================================================
+\newcommand{\docKingdom}{ROYAUME DU MAROC}
+\newcommand{\docUniversity}{Université Abdelmalek Essaâdi}
+\newcommand{\docSchool}{École Nationale des Sciences Appliquées d'Al Hoceima}
+\newcommand{\docTitle}{Rapport : TP Num\'{e}ro 3}
+\newcommand{\docSubtitle}{Initiation \`{a} la Programmation Orient\'{e}e Objet (Java)}
+\newcommand{\docModule}{Java / POO}
+\newcommand{\docAuthor}{Yazid TAHIRI ALAOUI}
+\newcommand{\docProgram}{1\`{e}re ann\'{e}e -- Ing\'{e}nierie Donn\'{e}es (ID1)}
+\newcommand{\docSupervisor}{Pr. Mohamed CHERRADI}
+\newcommand{\docYear}{2025 -- 2026}
+
+% ── Les entetes (lfo9 dyal les pages) ───────────────────────────────────
+\renewcommand{\headerLeft}{Rapport : TP Num\'{e}ro 3}
+\renewcommand{\headerRight}{ENSAH -- Ann\'{e}e 2025/2026}
+
+% ── Les metadonnees dyal PDF ────────────────────────────────────────────────────────────
+\hypersetup{
+    pdftitle={\docTitle},
+    pdfauthor={\docAuthor},
+    pdfsubject={\docModule},
+    pdfkeywords={ENSA, Projet, Template}
+}
+
+% ============================================================================
+%  NBDAW DOCUMENT HNA
+% ============================================================================
+\begin{document}
+
+% ── Page de garde (lghlaf) ──────────────────────────────────────────────────────────────
+\input{frontmatter/titlepage}
+
+% ── Tr9im romani f lbedya (i, ii, iii...) ──────────────────────────────────────
+\pagenumbering{roman}
+\newgeometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm, headheight=15pt}
+
+% ── Resume dyal chno derna ──────────────────────────────────────────────────────
+\renewcommand{\thechapter}{\Roman{chapter}}
+\input{frontmatter/abstract}
+
+% ── Sommaire (Table des matieres) ──────────────────────────────────────────────────────
+\newpage
+\renewcommand{\contentsname}{Table des matières}
+\tableofcontents
+\newpage
+
+% ── Lktab sa7 (nrj3ou l'ar9am 1 2 3...) ─────────────────────────────────────
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\renewcommand{\thechapter}{\arabic{chapter}}
+\setcounter{chapter}{0}
+
+% ── Nzidou chapitres dyalna hna ─────────────────────────────────────────────
+% ndkhlou TP3 nit:
+\input{chapters/tp3}
+% \input{chapters/chapter-02}
+% \input{chapters/chapter-03}
+
+% ── Lkhatima  ─────────────────────────────────────────────────────────────
+\input{chapters/conclusion}
+
+\vspace{2cm}
+\begin{flushright}
+\textit{\docAuthor}\\
+\textit{ENSAH -- \docYear}
+\end{flushright}
+
+\end{document}

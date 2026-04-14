@@ -1,0 +1,68 @@
+% ============================================================================
+%  titlepage.tex — Lghlaf dyal rapport
+%  Kheddam b TikZ w mdframed
+%  Les variables kaytjabou mn main.tex
+% ============================================================================
+
+\begin{titlepage}
+    % --- zwawa9 dyal jnab ---
+    \begin{tikzpicture}[remember picture, overlay]
+        \draw[primarycolor, line width=2.5pt]
+            ($(current page.north west) + (1.2cm,-1.2cm)$)
+            rectangle
+            ($(current page.south east) + (-1.2cm,1.2cm)$);
+        \draw[accentcolor, line width=0.8pt]
+            ($(current page.north west) + (1.4cm,-1.4cm)$)
+            rectangle
+            ($(current page.south east) + (-1.4cm,1.4cm)$);
+    \end{tikzpicture}
+
+    \vspace*{0.5cm}
+
+    % --- Les logos dyal lmadrassa ---
+    % 7et les tsawer f doussi logos w badel smyat hna
+    \begin{minipage}{0.3\textwidth}
+        \includegraphics[width=3.5cm]{logos/UAE.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.3\textwidth}
+        \raggedleft
+        \includegraphics[width=2cm]{logos/ENSAH.png}
+    \end{minipage}
+
+    \vspace*{1cm}
+
+    \begin{center}
+        % --- Smiyat dyal l'etablissement ---
+        {\large \textbf{\textcolor{primarycolor}{\docKingdom}}}\\[0.3cm]
+        {\large \textbf{\docUniversity}}\\[0.3cm]
+        {\large \textbf{\docSchool}}\\[2.5cm]
+
+        % --- L3onwan ---
+        \textcolor{accentcolor}{\rule{0.8\linewidth}{1.5pt}}\\[0.4cm]
+        {\huge\textbf{\textcolor{primarycolor}{\docTitle}}}\\[0.5cm]
+        {\LARGE\textbf{\docSubtitle}}\\[0.3cm]
+        \textcolor{accentcolor}{\rule{0.6\linewidth}{1.5pt}}\\[0.6cm]
+
+        % --- Semya dyal module hna ---
+        {\large \textbf{\textit{\docModule}}}\\[0.2cm]
+
+        \vspace{2.5cm}
+
+        % --- Lboita fin kayna smyti w smyt prof ---
+        \begin{mdframed}[linecolor=accentcolor, linewidth=1pt, roundcorner=10pt,
+            backgroundcolor=white, userdefinedwidth=0.8\textwidth, align=center]
+            \centering
+            \vspace{0.3cm}
+            \large\textbf{\textcolor{primarycolor}{Réalisé par :}}\\[0.2cm]
+            \textbf{\docAuthor}\\[0.4cm]
+            \large\textbf{\textcolor{primarycolor}{Filière :}} \docProgram\\[0.2cm]
+            \large\textbf{\textcolor{primarycolor}{Encadré par :}} \docSupervisor\\
+            \vspace{0.3cm}
+        \end{mdframed}
+
+        \vfill
+        {\large \textbf{\textcolor{primarycolor}{Année universitaire : \docYear}}}
+    \end{center}
+    \vspace*{0.5cm}
+\end{titlepage}
