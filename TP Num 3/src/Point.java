@@ -22,6 +22,10 @@ public class Point {
         double dist = Math.sqrt(p.x*p.x + p.y*p.y);
         return dist;
     }
+    public double distancedeuxpoints(Point p1, Point p2){
+        double dist = p1.distance(p2)-p1.distance(p1);
+        return dist;
+    }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
