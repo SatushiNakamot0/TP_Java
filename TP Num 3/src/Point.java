@@ -23,8 +23,8 @@ public class Point {
         return dist;
     }
     public double distancedeuxpoints(Point p1, Point p2){
-        double dist = p1.distance(p2)-p1.distance(p1);
-        return dist;
+        double distdeux = p1.distance(p2)-p1.distance(p1);
+        return distdeux;
     }
 
     public static void main(String[] args) {
